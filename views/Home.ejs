@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Collection</title>
+</head>
+<body>
+  <h1>Car Collection</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Car ID</th>
+        <th>Model</th>
+        <th>Make</th>
+        <th>Year</th>
+        <th>Color</th>
+        <th>Price</th>
+        <th>Mileage</th>
+        <th>Fuel Efficiency</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Description</th>
+        <th>Image</th> </tr>
+    </thead>
+    <tbody>
+      <% for (const car of cars) { %>
+        <tr>
+          <td><%= car.carID %></td>
+          <td><%= car.model %></td>
+          <td><%= car.make %></td>
+          <td><%= car.year %></td>
+          <td><%= car.color %></td>
+          <td>$<%= car.price %></td> <td><%= car.mileage %> miles</td>
+          <td><%= car.fuel_efficiency %> MPG</td>
+          <td><%= car.type %></td>
+          <td><%= car.status %></td>
+          <td><%= car.description %></td>
+          <td><img src="<%= car.image %>" alt="<%= car.model %> image" width="100"></td> </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>
